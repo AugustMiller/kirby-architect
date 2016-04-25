@@ -1,4 +1,4 @@
-# Kirby _Architect_: A Blueprint Reader
+# Kirby Architect: A Blueprint Reader
 
 > Easily reference Blueprint data from anywhere in your Kirby application.
 
