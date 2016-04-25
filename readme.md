@@ -15,7 +15,7 @@ You can install the Architect plugin as a submodule, if you're familiar with Git
 
 ```sh
 cd /path/to/your/project
-git submodule add git@github.com:AugustMiller/kirby-architect.git site/plugins/architect
+git submodule add https://github.com/AugustMiller/kirby-architect.git site/plugins/architect
 ```
 
 It's important that the folder be named `architect`, because Kirby looks for the plugin in a PHP file with the same name as its folder.
