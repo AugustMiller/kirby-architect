@@ -1,4 +1,4 @@
-# Kirby Blueprint Reader
+# Kirby _Architect_: A Blueprint Reader
 
 > Easily reference Blueprint data from anywhere in your Kirby application.
 
@@ -7,6 +7,21 @@ For projects where the same field and option labels are shared between the Panel
 This plugin is especially well-suited for generating forms used to filter pages.
 
 Currently, there is only support for Blueprints written in Yaml.
+
+
+## Installation
+
+You can install the Architect plugin as a submodule, if you're familiar with Git and the command line:
+
+```sh
+cd /path/to/your/project
+git submodule add git@github.com:AugustMiller/kirby-architect.git site/plugins/architect
+```
+
+It's important that the folder be named `architect`, because Kirby looks for the plugin in a PHP file with the same name as its folder.
+
+You can also directly [download](https://github.com/AugustMiller/kirby-architect/archive/master.zip) an archive of the current project state, rename the folder to `architect`, and add it to the `plugins` folder of your site.
+
 
 ## Blueprints
 
