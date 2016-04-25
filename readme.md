@@ -52,7 +52,7 @@ Historically, it's been difficult to output the full, translated option text (i.
 
 ### Get an entire Blueprint by template
 
-Returns a parsed Blurpeint. The class will look for `yml` and `yaml` extensions.
+Returns a parsed Blueprint. The class will look for `yml` and `yaml` extensions.
 
 ```php
 Architect::blueprint('variety');
@@ -108,7 +108,7 @@ Architect::field_options_menu('variety', 'density');
 </select>
 ```
 
-The blank `option` element is inserted when a field is not required in the blueprint, or the third argument is `false`: `Architect::field_options_menu('variety', 'density', false);`. `true` as the third argument makes the menu required. Use `null` as the third argument to use the default behavior (or whatever your override preference is), when passing the fourth language-override argument.
+The blank `option` element is inserted when a field is not required in the Blueprint, or the third argument is `false`: `Architect::field_options_menu('variety', 'density', false);`. `true` as the third argument makes the menu required. Use `null` as the third argument to use the default behavior (or whatever your override preference is), when passing the fourth language-override argument.
 
 ### Get arbitrary Blueprint data
 
