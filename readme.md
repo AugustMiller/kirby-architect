@@ -101,7 +101,7 @@ Architect::field_options_menu('variety', 'density');
 <!-- Viewed in the default language, `en` -->
 <select id="density" name="density">
   <option></option>
-  <option value="unknown" selected>Unknown</option>
+  <option value="unknown">Unknown</option>
   <option value="bourbon-like">Bourbon-like (3000-4000 a/ha)</option>
   <option value="caturra-like">Caturra-like (5000-6000 a/ha)</option>
   <option value="f1-hybrid-like">F1 hybrid-like (4000-5000 a/ha)</option>

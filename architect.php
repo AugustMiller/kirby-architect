@@ -51,9 +51,9 @@
     # Append actual selectable ones:
     foreach ( static::field_options($template, $field) as $value => $labels ) {
       $option = new Brick('option', static::field_option_label($template, $field, $value, $language), [
-        'value' => $value,
-        'selected' => r::get($field) == $value || array_search($value, array_keys($options)) == 0
+        'value' => $value
       ]);
+      if ( r::get($field) == $value ) $option->attr('selected', true);
       $menu->append($option);
     }
     return $menu;
