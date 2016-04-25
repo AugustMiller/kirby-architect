@@ -142,7 +142,7 @@ Architect::blueprint('variety')['notes'] # -> "As you'll see, you can store any 
 The same goes for data inside each field:
 
 ```php
-Architect::field_info('variety', 'density')['notes'] # ->
+Architect::field_info('variety', 'density')['help'] # -> Value should be calibrated against Caturra.
 ```
 
 Localization is not automatic when retrieving data manually.
