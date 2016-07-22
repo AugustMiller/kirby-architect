@@ -53,8 +53,12 @@
       $option = new Brick('option', static::field_option_label($template, $field, $value, $language), [
         'value' => $value
       ]);
-      if ( r::get($field) == $value ) $option->attr('selected', true);
-      $menu->append($option);
+
+      # Add the `option` element, unless it's value is present in the global blacklist.
+      if ( !in_array($value, c::get('architect.blacklist', [])) ) {
+        if ( r::get($field) == $value ) $option->attr('selected', true);
+        $menu->append($option);
+      }
     }
     return $menu;
   }

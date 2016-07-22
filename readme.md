@@ -125,6 +125,12 @@ Architect::field_options_menu('variety', 'density');
 
 The blank `option` element is inserted when a field is not required in the Blueprint, or the third argument is `false`: `Architect::field_options_menu('variety', 'density', false);`. `true` as the third argument makes the menu required. Use `null` as the third argument to use the default behavior (or whatever your override preference is), when passing the fourth language-override argument.
 
+Psst! You can black-list values from being output in menus. This is useful if you only want to filter by _some_ values that are present in the blueprint. It defaults to an empty array.
+
+```php
+c::set('architect.blacklist', ['your', 'custom', 'field', 'values']);
+```
+
 ### Get arbitrary Blueprint data
 
 You can get any data attached to a Blueprint, manually:
