@@ -14,11 +14,6 @@
     }
   }
 
-  # Read a Blueprint 
-  public static function blueprint_file ($template) {
-    return f::resolve(kirby()->roots()->blueprints() . '/' . $template, ['yml', 'yaml']);
-  }
-
   # Get data for a specific field in a template
   public static function field_info ($template, $field) {
     $fields = static::blueprint($template)['fields'];
