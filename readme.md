@@ -125,7 +125,7 @@ Architect::field_options_menu('variety', 'density');
 
 The blank `option` element is inserted when a field is not required in the Blueprint, or the third argument is `false`: `Architect::field_options_menu('variety', 'density', false);`. `true` as the third argument makes the menu required. Use `null` as the third argument to use the default behavior (or whatever your override preference is), when passing the fourth language-override argument.
 
-Psst! You can black-list values from being output in menus. This is useful if you only want to filter by _some_ values that are present in the blueprint. It defaults to an empty array.
+You can black-list values from being output in menus. This is useful if you only want to filter by _some_ values that are present in the blueprint. It defaults to an empty array.
 
 ```php
 c::set('architect.blacklist', ['your', 'custom', 'field', 'values']);
@@ -159,16 +159,28 @@ The plugin implements a static `$blueprints` property that acts as a cache for p
 
 A welcome supplement or alternative to this plugin would be a field method to fetch a field definition's data from a `Field` object, directly.
 
-You can emulate this functionality by adding to the `field::$methods` array:
+You can emulate this functionality piecemeal by adding a new file in your `plugins` folder:
 
 ```php
-field::$methods['label'] = function ($field) {
+kirby()->set('field::method', 'label', function ($field) {
   return Architect::field_label($field->page->intendedTemplate(), $field->name);
-};
+});
 
-field::$methods['fomattedValue'] = function ($field) {
+kirby()->set('field::method', 'formattedValue', function ($field) {
   return Architect::field_option_label($field->page->intendedTemplate(), $field->name, $field->value);
-};
+});
 ```
+
+It's also possible to add a method to fetch entire Blueprints from thier `Page` object:
+
+```php
+kirby()->set('page::method', 'architect', function($page) {
+  return Architect::blueprint($page->intendedTemplate());
+});
+```
+
+These methods are not required to use the Architect plugin— they just provide a shortcut to common methods. You can alias any of the plugin’s features this way.
+
+_Psst!_ If you're not used to the [Kirby Registry](https://getkirby.com/docs/developer-guide/plugins/registry) yet, you can back-port these solutions by [manually modifying](https://getkirby.com/docs/developer-guide/objects/) the Kirby objects.
 
 :deciduous_tree:
