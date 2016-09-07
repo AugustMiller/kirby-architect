@@ -1,4 +1,7 @@
 <?php class Architect {
+  # Architect Plugin Version
+  private static $version = "0.1.0";
+
   # Blueprint Cache
   private static $blueprints = [];
 
