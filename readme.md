@@ -6,8 +6,7 @@ For projects where the same field and option labels are shared between the Panel
 
 This plugin is especially well-suited for generating forms used to filter pages.
 
-Currently, there is only support for Blueprints written in Yaml.
-
+Only Kirby 2.3 and up are supported, as the Architect plugin makes use of the [Registry](https://getkirby.com/docs/developer-guide/plugins/registry).
 
 ## Installation
 

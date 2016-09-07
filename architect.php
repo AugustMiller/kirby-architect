@@ -8,12 +8,10 @@
   # Fetch all data for a Blueprint as an associative array
   public static function blueprint ($template) {
     if ( isset(static::$blueprints[$template]) ) {
-      $blueprint = static::$blueprints[$template];
+      return static::$blueprints[$template];
     } else {
-      $blueprint = static::$blueprints[$template] = yaml::decode(static::blueprint_file($template));
+      return static::$blueprints[$template] = yaml::decode(kirby()->get('blueprint', $template));
     }
-
-    return $blueprint;
   }
 
   # Read a Blueprint 
