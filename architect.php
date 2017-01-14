@@ -1,6 +1,6 @@
 <?php class Architect {
   # Architect Plugin Version
-  private static $version = "0.2.0";
+  private static $version = "0.3.0";
 
   # Blueprint Cache
   private static $blueprints = [];
@@ -81,10 +81,10 @@
 
     $options = static::field_options($template, $field);
 
-    if ( isset($options[$value]) ) {
+    if ( is_array($options[$value]) ) {
       return isset($options[$value][$language]) ? $options[$value][$language] : $options[$value][site()->defaultLanguage()->locale()];
     } else {
-      return str::ucWords(l::get('not_available'));
+      return $options[$value];
     }
   }
 }
