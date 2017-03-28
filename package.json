@@ -1,0 +1,8 @@
+{
+  "name": "architect",
+  "description": "Kirby Blueprint Reader",
+  "author": "August Miller",
+  "version": "0.3",
+  "type": "kirby-plugin",
+  "license": "MIT"
+}
